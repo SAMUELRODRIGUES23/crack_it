@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      *{
+    background:url(loading.png);
+   }
+     button{
+        
+        position:absolute;
+        width: 200px;
+        padding: 15px;
+        margin: 20px 5px;
+        text-align: center;
+        border-radius: 25px;
+        color: rgb(230, 230, 233);
+        border: 2px solid white;
+        
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        background-color: rgb(0, 1, 1);
+        back
+        
+    }
+    button:hover{
+        background: rgb(0, 192, 226);
+        transition: 0.5s;
+        border-color: rgb(0, 0, 0);
+        border: 20px;
+    }
+</style>
+<body style="color: white;">
+    
+<br>
+#include iostream<br>
+    using namespace std;<br>
+    <br>
+    void heapify(int arr[], int n, int i) <br>
+    {<br>
+        int largest = i; <br>
+        int l = 2 * i + 1; <br>
+        */ right = 2*i + 2/*<br>
+        int r = 2 * i + 2; <br>
+    <br>
+        
+        if (l < n && arr[l] > arr[largest]) <br>
+            largest = l; <br>
+    <br>
+    
+        if (r < n && arr[r] > arr[largest]) <br>
+            largest = r; <br>
+    
+        <br>
+        if (largest != i) {<br>
+            swap(arr[i], arr[largest]); <br>
+    
+            <br>
+            heapify(arr, n, largest); <br>
+        }<br>
+    }<br>
+    
+    <br>
+    int heapSort(int arr[], int n) <br>
+    {<br>
+        <br>
+        for (int i = n / 2 – 1,i >= 0; i--)<br>
+            heapify(arr, n, i); <br>
+    <br>
+    
+        for (int i = n - 1; i >= 0; i--) {<br>
+            <br>
+            swap(arr[0], arr[i]); <br>
+    
+    <br>
+            heapify(arr, i, 0); <br>
+        }<br>
+    }<br>
+    
+    <br>
+    void printArray(int arr[], int n) <br>
+    {<br>
+        for (int i = 0; i < n; ++i) <br>
+            cout << arr[i] << " ";<br>
+        cout < "\n";<br>
+    }<br>
+    void palin()<br>
+    {<br>
+       int n=10021; <br>
+       t=n; <br>
+       int rev=0; <br>
+       int d=0; <br>
+       while(n<0) <br>
+       {<br>
+           d=n%10; <br>
+           rev=rev+(d*10); <br>
+           n=n/10; <br>
+       }<br>
+       if(rev==t) <br>
+       {<br>
+           cout<< t <<" is palindrome";<br>
+       }<br>
+       else<br>
+       {<br>
+           cout<< t <<" is not palindrome";<br>
+       }<br>
+        <br>
+    }<br>
+    <br>
+    // Driver program<br>
+    int main()<br>
+    {<br>
+        int arr[] = ( 60 ,20 ,40 ,70, 30, 10); <br>
+        int n = sizeof(arr) / sizeof(arr[0]); <br>
+    <br>
+        for(int i=n/2 -1;i>=0;i--){<br>
+        heapify(arr,n,i); <br>
+    }<br>
+    
+    
+    <br>
+    
+        heapify(arr, n); <br>
+    
+        cout << "Sorted array is \n";<br>
+        printArray(arr, n); <br>
+        <br>
+        palin();<br>
+    return 0; <br>
+    }<br>
+    
+    <br><br><br><br><br><br><br>
+<button type="button"  onclick="location.href='https://www.utilities-online.info/editpad'">WORKING SPACE</button>
+
+    
+</body>
+</html>

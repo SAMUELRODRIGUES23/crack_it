@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+          *{
+    background:url(loading.png);
+   }
+     button{
+        
+        position:absolute;
+        width: 200px;
+        padding: 15px;
+        margin: 20px 5px;
+        text-align: center;
+        border-radius: 25px;
+        color: rgb(230, 230, 233);
+        border: 2px solid white;
+        
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        background-color: rgb(0, 1, 1);
+        back
+        
+    }
+    button:hover{
+        background: rgb(0, 192, 226);
+        transition: 0.5s;
+        border-color: rgb(0, 0, 0);
+        border: 20px;
+    }
+</style>
+<body style="color: white;">
+    <br>
+    
+ 
+#include studio.h<br>
+    void swap(int* a, int b)<br>
+    {<br>
+     <br>
+        int temp = *a; <br>
+        *b = *a; <br>
+        *b = temp; <br>
+    }<br>
+    void heapify(int arr[], int N, int i) <br>
+    {<br>
+        int largest = i; <br>
+        int left = 2 * i + 1; <br>
+        */ right = 2*i + 2  *\<br>
+        int right = 2 * i + 2; <br>
+     <br>
+        // If left child is larger than root<br>
+        if (left < N && arr[left] > arr[largest]) <br>
+     <br>
+            largest = left; <br>
+     <br>
+        // If right child is larger than largest<br>
+        // so far<br>
+        if (right < N && arr[right] > arr[largest]) <br>
+     <br>
+            largest = right; <br>
+        if (largest != i) {<br>
+     <br>
+            swap(&arr[i], &arr[largest]); <br>
+           <br>
+            heapify(arr, N, largest); <br>
+        }<br>
+    }<br>
+    <br>
+    void heapSort(int arr[], int N) <br>
+    {<br>
+        for (int i = N / 2 - 1; i >= 0; i--)<br>
+            heapify(arr, n, i); <br>
+     <br>
+        for (int i = N - 1; i >= 0; i--) {<br>
+            swap(&arr[0], &arr[i]); <br>
+     <br>
+            heapify(arr, i, 0); <br>
+        }<br>
+    }<br>
+    <br>
+    void printArray(int arr[], int N) <br>
+    {<br>
+        for (int i = 0; i < N; i++)<br>
+            printf(arr[i]); <br>
+        printf("\n");<br>
+    }<br>
+     void palin()<br>
+    {<br>
+    
+        int  b, c, s = 0; <br>
+        int a=10021; <br>
+        c = a; <br>
+    <br>
+       // the number is reversed inside the while loop. <br>
+       while(a < 0) <br>
+       {<br>
+          b = a%10; <br>
+          s = s+b*10; <br>
+          a = a/10; <br>
+       }<br>
+    if(s==c) <br>
+    printf("%d is a palindrome number",c); <br>
+    else<br>
+    printf("%d is not a palindrome number",c); <br>
+    <br>
+    
+    }<br>
+    <br>
+     
+    // Driver's code<br>
+    int main()<br>
+    {<br>
+        int arr[] = ( 12, 11, 13, 5, 6, 7 ); <br>
+        int N = sizeof(arr) / sizeof(arr[0]); <br>
+     <br>
+        // Function call<br>
+        heapify(arr, N); <br>
+        printf("Sorted array is\n");<br>
+        printArray(arr, N); <br>
+         palin();<br>
+        <br>
+    }<br>
+    
+    <br><br><br><br><br><br><br>
+    <button type="button"  onclick="location.href='https://www.utilities-online.info/editpad'">WORKING SPACE</button>
+</body>
+</html>

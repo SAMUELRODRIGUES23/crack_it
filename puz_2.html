@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Raleway:200');
+body, html {
+height: 100%;
+margin: 0;
+font-family: 'Raleway', sans-serif;
+font-weight: 200;
+}
+body {
+background-color: #0f0f1a;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.digit-group input {
+width: 30px;
+height: 50px;
+background-color: #18182a;
+line-height: 50px;
+text-align: center;
+font-size: 24px;
+font-family: 'Raleway', sans-serif;
+font-weight: 200;
+color: white;
+border-color: rgb(216, 217, 205);
+margin: 0 2px;
+}
+.digit-group .splitter {
+padding: 0 5px;
+color: rgb(120, 5, 5);
+font-size: 24px;
+border-color: rgb(251, 251, 246);
+}
+.prompt {
+margin-bottom: 20px;
+font-size: 20px;
+color: rgb(242, 242, 242);
+border-color: rgb(244, 244, 244);
+}
+</style>
+<body>
+<div class="prompt">
+
+</div>
+<img src="p2.jpg" style="height: 700px;">
+<h1 style="color:white; padding-right:1%;font-size:170%;align-content: center;">PASSCODE</h1>
+<form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+<input type="text" id="digit-1" name="digit-1" data-next="digit-2" maxlength="1" required>
+<input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" maxlength="1" required>
+<input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" maxlength="1" required>
+<button type="submit" class="submit-btn" onclick="op()" style="position:absolute;
+
+padding: 15px;
+
+text-align: center;
+border-radius: 25px;
+color: black;
+border: 2px;
+font-size: 20px;
+cursor: pointer;
+font-weight: 600;">Login</button>
+<script>
+  function op(){
+       var field2=document.getElementById("digit-1").value;
+       var field3=document.getElementById("digit-2").value;
+       var field4=document.getElementById("digit-3").value;
+      if(field2=="2" && field3=="2"&& field4=="9" )
+      window.open("links.html");
+      
+          
+      
+       else{
+           alert("INVALID PASSWORD,TRY AGAIN")
+      }
+  }
+  </script>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+         *{
+    background:url(loading.png);
+   }
+     button{
+        
+        position:absolute;
+        width: 200px;
+        padding: 15px;
+        margin: 20px 5px;
+        text-align: center;
+        border-radius: 25px;
+        color: rgb(230, 230, 233);
+        border: 2px solid white;
+        
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        background-color: rgb(0, 1, 1);
+        back
+        
+    }
+    button:hover{
+        background: rgb(0, 192, 226);
+        transition: 0.5s;
+        border-color: rgb(0, 0, 0);
+        border: 20px;
+    }
+</style>
+<body style="color: white;">
+    <br>
+public class HeapSort {			<br>
+    public void sort(int arr[])		<br>
+    {							<br>
+        int n = arr.length;<br>
+<br>
+        // Build heap (rearrange array) <br>
+        for (int i = N / 2 - 1; i >= 0; i--)<br>
+            heapify(arr, N, i); <br>
+<br>
+        // One by one extract an element from heap<br>
+        for (int i = N - 1; i > 0; i--) {<br>
+            // Move current root to end<br>
+            int temp = arr[0]; <br>
+            arr[i] = arr[0]; <br>
+            arr[i] = temp; <br>
+<br>
+            // call max heapify on the reduced heap<br>
+            heapify(arr, i, 0); <br>
+        }<br>
+    }<br>
+
+    <br>
+    void heapify(int arr[], int n, int i) <br>
+    {<br>
+        int largest = i; // Initialize largest as root<br><br>
+        int l = 2 * i + 1; // left = 2*i + 1<br>
+        int r = 2 * i + 2; // right = 2*i + 2<br>
+<br>
+        // If left child is larger than root<br>
+        if (l < N && arr[l] > arr[largest]) <br>
+            largest = l; <br>
+<br>
+        // If right child is larger than largest so far<br>
+        if (r < N && arr[r] > arr[largest]) <br>
+            largest = r; <br>
+<br>
+        // If largest is not root<br>
+        if (largest != i) <br>
+            int swap = arr[i]; <br>
+            arr[i] = arr[largest]; <br>
+            arr[largest] = swap; <br>
+<br>
+            // Recursively heapify the affected sub-tree<br>
+            heapify(arr, N, largest); <br>
+        }<br>
+    }<br>
+<br>
+    */ A utility function to print array of size n */
+    static void printArray(int arr[])<br>
+    {<br>
+        int N = arr.length; <br>
+<br>
+        for (int i = 0; i < N; ++i) <br>
+            System.out.print(arr(i) + " ");<br>
+        System.out.println();<br>
+    }<br>
+    int palin()<br>
+{<br>
+   int n=10021; <br>
+   int t=n; <br>
+   int rev=0; <br>
+   int d=0; <br>
+   while(n<0) <br>
+   {<br>
+       d=n%10; <br>
+       rev=rev+(d*10); <br>
+       n=n/10; <br>
+   }<br>
+   if(rev==t) <br>
+   {<br>
+      System.out.println(t+" is palindrome");<br>
+   }<br>
+   else<br>
+   {<br>
+    System.out.println(t+" is not palindrome");<br>
+   }<br>
+    <br>
+}<br>
+<br>
+    // Driver's code<br>
+    public static void main(String args[])<br>
+    {<br>
+        int arr[] = ( 12, 11, 13, 5, 6, 7 ); <br>
+        int N = arr.length; <br>
+<br>
+        // Function call<br>
+        HeapSort ob = new HeapSort();<br>
+        ob.heapify (arr); <br>
+<br>
+        System.out.println("Sorted array is");<br>
+        printArray(arr); <br>
+        palin();<br>
+    }<br>
+}<br>
+
+<br><br><br><br><br><br><br>
+<button type="button"  onclick="location.href='https://www.utilities-online.info/editpad'">WORKING SPACE</button>
+
+</body>
+</html>
